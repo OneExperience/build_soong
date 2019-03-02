@@ -20,7 +20,7 @@ import (
 	"runtime"
 	"strings"
 
-	"aosp/soong/android_aosp"
+	"one/soong/android_one"
 
 	"github.com/google/blueprint/proptools"
 )
@@ -97,8 +97,8 @@ type variableProperties struct {
 			Enabled *bool
 		}
 
-		// include AOSP variables
-		Aosp android_aosp.Product_variables
+		// include One variables
+		One android_one.Product_variables
 	} `android:"arch_variant"`
 }
 
@@ -173,8 +173,8 @@ type productVariables struct {
 
 	DeviceKernelHeaders []string `json:",omitempty"`
 
-	// include AOSP variables
-	Aosp android_aosp.ProductVariables
+	// include One variables
+	One android_one.ProductVariables
 }
 
 func boolPtr(v bool) *bool {
